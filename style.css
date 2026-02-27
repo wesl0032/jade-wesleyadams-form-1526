@@ -1,0 +1,113 @@
+/* ====================================
+Base styling (all screen sizes) 
+==================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    background-color: #F5F5F5;
+}
+
+main {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+fieldset {
+    border: 1px solid #DDD;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+legend {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+    background-color: #F5F5F5;
+}
+
+label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #DDD;
+    background-color: #fff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 6rem;
+}
+
+
+input[type="button"] {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background-color: #6495ED;
+    width: 100%;
+}
+
+input[type="button"]:hover {
+    opacity: 0.90;
+}
+
+.name-email {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+/* ====================================
+Tablet - 25rem + 
+==================================== */
+
+@media (min-width: 25rem) {
+  .name-email {
+    flex-direction: row;
+  }  
+
+  .name-email div {
+    flex: 1;
+  }
+
+  input[type="button"] {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+/* ====================================
+Desktop - 40rem + 
+==================================== */
+
+@media (min-width: 40rem) {
+    main {
+        margin: 2rem auto;
+    }
+
+    fieldset {
+        padding: 2rem;
+    }
+}
+
